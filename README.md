@@ -1,8 +1,8 @@
 HashIcon
 ========
 
-HashIcon is a PHP Class which generate unique pictures based on a hash.  
-Pictures are generated in a Base64 format.
+HashIcon is a PHP Class which generate unique icon based on a hash.  
+Icons are generated in a Base64 format.
 
 Functions
 ---------

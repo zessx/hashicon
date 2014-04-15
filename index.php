@@ -65,30 +65,107 @@ $image = HashIcon::toIcon($algo, $hash);
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>HashIcon</title>
 	<style>
-	form, img {
-		display: block;
-		width: 300px;
-		margin: 25px auto;
-		text-align: center;
+	body {
+		background: #34495e;
+		color: #2c3e50;
+		font-family: Arial;
 	}
-	label, input {
+	section {
+		width: 300px;
+		margin: 20px auto;
+	}
+	h1, h2 {
+		color: white;
+		text-align: center;
+		margin: 0;
+	}
+	h1 {
+		font-size: 60px;
+	}
+	h2 {
+		font-size: 14px;
+		margin-bottom: 25px;
+	}
+	img,
+	textarea,
+	select,
+	button {
 		box-sizing: border-box;
-		width: 200px;
+		display: block;
+		width: 100%;
+		margin: 10px 0;
+		padding: 10px;
+		color: #2c3e50;
+		border: 3px solid #efefef;
+		border-radius: 4px;
+		background: white;
+		outline: 0;
+	}
+	img:hover,
+	img:focus,
+	textarea:hover,
+	textarea:focus,
+	select:hover,
+	select:focus,
+	button:hover,
+	button:focus {
+		box-shadow: 0 0 10px 2px #0B2238;
+	}
+	::-webkit-textarea-placeholder {
+		color: #bbb;
+	}
+	:-moz-placeholder {
+		color: #bbb;
+	}
+	textarea{
+		resize: vertical;
+	}
+	button{
+		cursor: pointer;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	footer {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+		height: 40px;
+		background: white;
+		border-top: 3px solid #efefef;
+	}
+	footer a {
+		color: #2c3e50;
+		font-size: 12px;
+		line-height: 40px;
+		text-decoration: none;
+	}
+	footer a:hover,
+	footer a:focus {
+		text-decoration: underline;
 	}
 	</style>
 </head>
 <body>
-	<img src="data:image/png;base64,<?php echo $image; ?>" alt="<?php echo $hash; ?>" title="<?php echo $hash; ?>">
-	<form method="post">
-		<input name="input" id="input" type="text" required value="<?php echo htmlentities($input); ?>">
-		<select name="algo">
-		<?php
-			foreach ($algorythms as $key => $algorythm) {
-				echo '<option value="'.$key.'"'.($algo == $key ? ' selected' : '').'>'.$algorythm['name'].'</option>'."\r\n";
-			}
-		?>
-		</select>
-		<input type="submit" value="Generate Unique Icon" />
-	 </form>
+	<section>
+		<h1>HashIcon</h1>
+		<h2>Generate unique icon base on a hash</h2>
+		<img src="data:image/png;base64,<?php echo $image; ?>" alt="<?php echo $hash; ?>" title="<?php echo $hash; ?>">
+		<form method="post">
+			<textarea name="input" rows="7"><?php echo htmlentities($input); ?></textarea>
+			<select name="algo">
+				<?php
+				foreach ($algorythms as $key => $algorythm) {
+					echo '<option value="'.$key.'"'.($algo == $key ? ' selected' : '').'>'.$algorythm['name'].'</option>'."\r\n";
+				}
+				?>
+			</select>
+			<button type="submit">Generate</button>
+		</form>
+	</section>
+	<footer>
+		<a href="https://twitter.com/zessx">Made with ♥ by @zessx</a> - <a href="https://github.com/zessx/hashicon">Sources are on Github</a> - <a href="http://opensource.org/licenses/MIT">Licence MIT</a>
+	</footer>
 </body>
 </html>
