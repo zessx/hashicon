@@ -1,7 +1,4 @@
 <?php
-/**
- * I belong to a file
- */
 
 class HashIcon {
 
