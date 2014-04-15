@@ -24,6 +24,8 @@ echo base64_decode($image);
 // or <img src="data:image/png;base64,<?= $image ?>">
 ```
 
+![HashIcon example](sample.png)
+
 Accepted algorythms
 -------------------
 - HAVAL-256,3
