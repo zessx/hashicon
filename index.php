@@ -75,16 +75,26 @@ $image = HashIcon::toIcon($algo, $hash);
 		margin: 20px auto;
 	}
 	h1, h2 {
-		color: white;
 		text-align: center;
 		margin: 0;
 	}
 	h1 {
+		background: white url(./HashIcon.png) 0 0 no-repeat;
+		background-size: cover;
 		font-size: 60px;
+		text-indent: -9999em;
+		font-size: 60px;
+		border: 3px solid #efefef;
+		border-bottom: 0;
+		border-radius: 4px 4px 0 0;
 	}
 	h2 {
 		font-size: 14px;
-		margin-bottom: 25px;
+		padding: 10px 0;
+		background: white;
+		border: 3px solid #efefef;
+		border-top: 0;
+		border-radius: 0 0 4px 4px;
 	}
 	img,
 	textarea,

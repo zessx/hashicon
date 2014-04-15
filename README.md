@@ -1,4 +1,4 @@
-HashIcon
+![HashIcon](HashIcon.png)
 ========
 
 HashIcon is a PHP Class which generate unique icon based on a hash.  
