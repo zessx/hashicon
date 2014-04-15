@@ -2,7 +2,7 @@
 
 require 'HashIcon.php';
 
-$algorythms = [
+$algorythms = array(
 	// HashIcon::ADLER32 => array('name' => 'ADLER-32', 'function' => 'adler32'),
 	// HashIcon::CRC32 => array('name' => 'CRC-32', 'function' => 'crc32'),
 	// HashIcon::CRC32B => array('name' => 'CRC-32B', 'function' => 'crc32b'),
@@ -49,7 +49,7 @@ $algorythms = [
 
 	// HashIcon::SHA512 => array('name' => 'SHA-512', 'function' => 'sha512'),
 	// HashIcon::WHIRLPOOL => array('name' => 'WHIRLPOOL, 'function' => 'whirlpool')'
-];
+);
 ksort($algorythms);
 
 $input = isset($_POST['input']) ? $_POST['input'] : 'Lorem ipsum dolor sit amet.';

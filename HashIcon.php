@@ -57,12 +57,12 @@ class HashIcon {
 	/* Private variables */
 	private static $background = null;
 	private static $colors = null;
-	private static $shapes = [
-		[0, 0, 1, 1, 0, 1],
-		[0, 0, 1, 1, 1, 0],
-		[0, 0, 0, 1, 1, 0],
-		[0, 1, 1, 0, 1, 1]
-	];
+	private static $shapes = array(
+		array(0, 0, 1, 1, 0, 1),
+		array(0, 0, 1, 1, 1, 0),
+		array(0, 0, 0, 1, 1, 0),
+		array(0, 1, 1, 0, 1, 1)
+	);
 
 	public static function toIcon($algo, $hash, $size = 300, $format = self::PNG)
 	{
@@ -105,12 +105,12 @@ class HashIcon {
 
 		/* Define colors */
 		self::$background = imagecolorallocate($icon, 255, 255, 255);
-		self::$colors = [
+		self::$colors = array(
 			imagecolorallocate($icon, 231, 76, 60),
 			imagecolorallocate($icon, 46, 204, 113),
 			imagecolorallocate($icon,52, 152, 219),
 			imagecolorallocate($icon, 241, 196, 15)
-		];
+		);
 
 		/* Set Background */
 		imagefill($icon, 0, 0, self::$background);
@@ -155,7 +155,7 @@ class HashIcon {
 					return $value * $size / 8 + $offset;
 				},
 				array_fill(0, 6, $size),
-				self::$shapes[$dbit % 4], [$x * $size / 8, $y * $size / 8, $x * $size / 8, $y * $size / 8, $x * $size / 8, $y * $size / 8]
+				self::$shapes[$dbit % 4], array($x * $size / 8, $y * $size / 8, $x * $size / 8, $y * $size / 8, $x * $size / 8, $y * $size / 8)
 			);
 			$color = self::$colors[floor($dbit / 4)];
 			imagefilledpolygon($icon, $shape, 3, $color);
