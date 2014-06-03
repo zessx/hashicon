@@ -77,3 +77,17 @@ Add algorythms :
 - SHA-384
 - SHA-512
 - Whirlpool
+
+ 
+Legals
+------
+- Author : [zessx](https://github.com/zessx)
+- Licence : [MIT](http://opensource.org/licenses/MIT) 
+- Contact : [@zessx](https://twitter.com/zessx)
+- Link  : [http://hashicon.smarchal.com](http://hashicon.smarchal.com)
+
+Donations
+---------
+
+[![Buy me a coffee !](http://doc.smarchal.com/bmac)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=KTYWBM9HJMMSE&lc=FR&item_name=Buy%20a%20coffee%20to%20zessx%20%28Samuel%20Marchal%29&currency_code=EUR&bn=PP%2dDonationsBF%3abmac%3aNonHosted)
+	
