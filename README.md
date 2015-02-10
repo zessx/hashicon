@@ -1,4 +1,4 @@
 Hashicon
 ========
 
-[http://hashicon.smarchal.com](http://hashicon.smarchal.com)
+[http://work.smarchal.com/hashicon](http://work.smarchal.com/hashicon)
